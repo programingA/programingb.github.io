@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Home page</title>
+    <link rel="stylesheet" href="/mainStyle.css">
+    <link rel="stylesheet" href="/mainStyle2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="chipCase">
+        <h1 class="chipCaseFont">Chip Case</h1>
+        <div class="chip1" draggable="true">
+            <div class="chipMotionImg1"></div>
+            <div class="chipMotionDown">▼</div>
+        </div>
+        <div class="chip2" draggable="true">
+            <div class="chipMotionImg2"></div>
+            <div class="chipMotionDown">▼</div>
+        </div>
+        <div class="chip3" draggable="true">
+            <div class="chipMotionImg3"></div>
+            <div class="chipMotionDown">▼</div>
+        </div>
+    </div>
+    <div class="chipMotion">
+        <div class="chipMotionImg"></div>
+        <div class="chipMotionDown">▼</div>
+    </div>
+    <div class="powerButton"></div>
+    <div class="console">
+        <div class="screen">
+            <div class="screenSystem"></div>
+        </div>
+    </div>
+    <div class="leftSideBar"></div>
+    <div class="rightSideBar"></div>
+    <div class="controllerLeft">
+        <div class="minus"></div>
+        <div class="leftJoystick"></div>
+        <div class="leftBtn1">▲</div>
+        <div class="leftBtn2">▼</div>
+        <div class="leftBtn3">◀</div>
+        <div class="leftBtn4">▶</div>
+        <div class="idn1"></div>
+    </div>
+    <div class="controllerRight">
+        <div class="plus"></div>
+        <div class="plus1"></div>
+        <div class="plus2"></div>
+        <div class="rightBtn1">X</div>
+        <div class="rightBtn2">B</div>
+        <div class="rightBtn3">Y</div>
+        <div class="rightBtn4">A</div>
+        <div class="rightJoystick"></div>
+        <div class="idn2"></div>
+    </div>
+    <div class="dragZone1">Drop the Chip</div>
+    <div class="dragZone2">Drop the Chip</div>
+    <div class="dragZone3">Drop the Chip</div>
+    <div class="manual" onclick="sizeUp()">
+        Manual
+        
+        <h3 class="manualTextBox">
+            <span class="lineText1">Welcome to my web</span><br> 
+            <span class="lineText2">
+            1. First, press the button on the game console<br>
+            2. Second, drag the chips from the chip case<br>
+            3. Third, drop the chip in the drop zone
+            </span>
+            <div class="textImg1"></div>
+            <div class="textImg2"></div>
+            <div class="textImg3"></div>
+        </h3>     
+    </div>
+    <button class="manualBtn" onclick="sizeDown()"></button>
+    <script src="/main.js"></script>
+    <script src="/main2.js"></script>
+    <script src="/main3.js"></script>
+</body>
+</html>

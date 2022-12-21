@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'DOSMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(0, 170, 248);
+}
+
+#introFont{
+    position: relative;
+    top: 360px;
+    left: 775px;
+    display: inline;
+    font-size: 40px;
+    font-family: 'DOSMyungjo';
+    padding: 20px;
+    border: 1px solid darkblue;
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255);
+    background-color: rgb(62, 96, 245);
+    color:#ffff00b4; 
+}
+
+#btn{
+    position: absolute;
+    top: 434px;
+    left: 910px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px double rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+#circle{
+    position: absolute;
+    top: 434px;
+    left: 910px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+}
+#circle2{
+    position: absolute;
+    top: 484px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    padding: 20px;
+}
+@keyframes aniOne{
+    0%{
+        background-color: #2e2e2e;
+        border: 3px solid rgb(255, 255, 255);
+    }
+    1%{
+        top: 434px;
+    }
+    95%{
+        width: 100px;
+    }
+    to{
+        top: 800px;
+        width: 115px;
+        height: 90px;
+        background-color: #2e2e2e;
+        border: 3px solid rgb(255, 255, 255);
+    }
+}
+
+@keyframes aniTwo{
+    0%{
+        background-color: #2e2e2e;
+    }
+    35%{
+        width: 30px;
+        height: 30px;
+    }
+    50%{
+        border-radius: 50%;
+    }
+    95%{
+        border-radius: 3%;
+        border: 15px solid white;
+    }
+    to{
+        width: 1600px;
+        height: 750px;
+        border-radius: 0%;
+        border: 15px ridge white;
+        background-color: #2e2e2e;
+    }
+}
+
+#typingAni{
+    display: none;
+    color: rgb(96, 255, 202);
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: 'DOSMyungjo';
+    
+}
+
+#typingAni::after {
+    content: '';
+    margin-left: 4px;
+    border-right: 4px solid #777;
+    animation: cursor .5s infinite steps(2); 
+}
+  
+@keyframes cursor {
+    from { border-right: 4px solid #2e2e2e; }
+    to { border-right: 4px solid #777; }
+}
+
+#lodingImg{
+    width: 500px;
+    height: 190px;
+    display: none;
+    transform: translate(-50%,-50%);
+    position: relative;
+    left: 50%;
+    top: 40%;
+}
+
+#lodingBar{
+    font-family: 'DOSMyungjo';
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    display: none;
+    transform: translate(-50%,-50%);
+    position: relative;
+    left: 50%;
+    top: 33%;
+    width: 200px;
+    height: 20px;
+    opacity: 0.8;
+}
+#lodingBar::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(54, 241, 7);
+    width: 1px;
+    height: 20px;
+    z-index: 0;
+    animation: lodingBarAni 10s ease-in-out infinite;
+}
+
+@keyframes lodingBarAni{
+    from{
+        width: 1px;
+    }
+    to{
+        width: 100%;
+    }
+}

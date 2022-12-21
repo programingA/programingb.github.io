@@ -1,0 +1,617 @@
+@font-face {
+    font-family: 'DOSMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(/img/마리오배경v2.PNG);
+    background-size: 2000px 967px;
+    animation: moving 8s linear infinite;
+}
+.console{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50vh;
+    left: 50%;
+    width: 680px;
+    height: 350px;
+    border: solid 3px black;
+    border-radius: 4%;
+    background-color: rgb(41, 41, 41);
+}
+.controllerLeft{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50vh;
+    left: 29%;
+    width: 120px;
+    height: 350px;
+    border-radius: 70% 0px 0px 70% / 80px 0px 0px 80px; 
+    background-color: rgb(36, 202, 253);
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.411) inset;
+}
+.controllerRight{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50vh;
+    left: 71%;
+    width: 120px;
+    height: 350px;
+    border-radius: 0px 70% 70% 0px / 0px 80px 80px 0px;
+    background-color: rgb(250, 101, 101);
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.411) inset;
+}
+.screen{
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 605px;
+    height: 300px;
+    border: solid 20px rgb(0, 0, 0);
+    border-left: solid 30px rgb(0, 0, 0);
+    border-right: solid 30px rgb(0, 0, 0);
+    border-radius: 3%;
+}
+.leftSideBar{
+    position: absolute;
+    top: 305px;
+    left: 500px;
+    width: 100px;
+    height: 60px;
+    border-radius: 90px 5px 0px 30px / 60px 5px 0px 0px; 
+    background-color: black;
+}
+.rightSideBar{
+    position: absolute;
+    top: 305px;
+    right: 501px;
+    width: 100px;
+    height: 60px;
+    border-radius: 5px 90px 30px 0px / 5px 60px 0px 0px; 
+    background-color: black;
+}
+.minus{
+    position: relative;
+    top: 20px;
+    left: 85px;
+    background-color: rgb(53, 53, 53);
+    width: 20px;
+    height: 5px;
+    border-radius: 10%;
+    border: 2px outset rgb(41, 41, 41);
+    box-shadow: 1px 1px 1px 1px rgb(99, 101, 102) inset;
+}
+.leftJoystick{
+    cursor: grab;
+    position: relative;
+    top: 50px;
+    left: 40px;
+    background-color: rgb(53, 53, 53);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 2px 2px rgb(99, 101, 102) inset;
+}
+.leftJoystick::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    height: 70%;
+    border: 5px solid rgba(0, 0, 0, 0.479);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+}
+.leftBtn1{
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    color: rgb(19, 19, 19);
+    position: relative;
+    top: 70px;
+    left: 50px;
+    background-color: rgb(53, 53, 53);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px rgb(99, 101, 102) inset;
+}
+.leftBtn2{
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    color: rgb(19, 19, 19);
+    position: relative;
+    top: 89px;
+    left: 50px;
+    background-color: rgb(53, 53, 53);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px rgb(99, 101, 102) inset;
+}
+.leftBtn3{
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    color: rgb(19, 19, 19);
+    position: relative;
+    top: 39px;
+    left: 20px;
+    background-color: rgb(53, 53, 53);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px rgb(99, 101, 102) inset;
+}
+.leftBtn4{
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    color: rgb(19, 19, 19);
+    position: relative;
+    top: 12px;
+    left: 80px;
+    background-color: rgb(53, 53, 53);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px rgb(99, 101, 102) inset;
+}
+.idn1{
+    position: relative;
+    top: 50px;
+    left: 75px;
+    background-color: rgb(53, 53, 53);
+    width: 20px;
+    height: 20px;
+    border-radius: 20%;
+    box-shadow: 2px 2px 2px 2px rgb(99, 101, 102) inset;
+}
+.idn1::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60%;
+    height: 60%;
+    background-color: rgb(53, 50, 50);
+    border: 1px solid rgba(0, 0, 0, 0.479);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+}
+.plus{
+    position: relative;
+    top: 20px;
+    left: 13px;
+    background-color: rgb(53, 53, 53);
+    width: 20px;
+    height: 5px;
+    border-radius: 10%;
+    border: 2px outset rgb(41, 41, 41);
+    box-shadow: 1px 1px 1px 1px rgb(99, 101, 102) inset;
+}
+.plus1{
+    position: relative;
+    top: 11px;
+    left: 13px;
+    background-color: rgb(53, 53, 53);
+    width: 20px;
+    height: 5px;
+    border-radius: 10%;
+    border: 2px outset rgb(41, 41, 41);
+    box-shadow: 1px 1px 1px 1px rgb(99, 101, 102) inset;
+    transform: rotate( 270deg );
+}
+.plus2{
+    position: relative;
+    top: 2px;
+    left: 20.4px;
+    background-color: rgb(53, 53, 53);
+    width: 5px;
+    height: 5px;
+    border-radius: 10%;
+    border: 2px solid rgb(53, 53, 53);
+    transform: rotate( 270deg );
+}
+.rightBtn1{
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 550;
+    text-align: center;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.808);
+    position: relative;
+    top: 20px;
+    left: 45px;
+    background-color: rgb(53, 53, 53);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px rgb(99, 101, 102) inset;
+}
+.rightBtn2{
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 550;
+    text-align: center;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.808);
+    position: relative;
+    top: 39px;
+    left: 45px;
+    background-color: rgb(53, 53, 53);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px rgb(99, 101, 102) inset;
+}
+.rightBtn3{
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 550;
+    text-align: center;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.808);
+    position: relative;
+    top: -11px;
+    left: 15px;
+    background-color: rgb(53, 53, 53);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px rgb(99, 101, 102) inset;
+}
+.rightBtn4{
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 550;
+    text-align: center;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.808);
+    position: relative;
+    top: -38px;
+    left: 75px;
+    background-color: rgb(53, 53, 53);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px rgb(99, 101, 102) inset;
+}
+.rightJoystick{
+    cursor: grab;
+    position: relative;
+    top: 20px;
+    left: 35px;
+    background-color: rgb(53, 53, 53);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 2px 2px rgb(99, 101, 102) inset;
+}
+.rightJoystick::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    height: 70%;
+    border: 5px solid rgba(0, 0, 0, 0.479);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+}
+.idn2{
+    position: relative;
+    top: 50px;
+    left: 25px;
+    background-color: rgb(53, 53, 53);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 2px rgb(99, 101, 102) inset;
+}
+.idn2::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    background-color: rgb(34, 33, 33);
+    border: 1px solid rgba(0, 0, 0, 0.479);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+}
+.screenSystem{
+    position: relative;
+    left: 303px;
+    top: 150px;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: none;
+}
+.powerButton{
+    cursor: pointer;
+    position: relative;
+    background-color: red;
+    width: 30px;
+    height: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(244, 244, 245, 0.459) inset;
+}
+.manual{
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 110px;
+    height: 90px;
+    background-color: rgba(250, 247, 66, 0.767);
+    border-top: 4px solid black;
+    border-bottom: 1px dashed black;
+    font-family: 'DOSMyungjo';
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+.manualBtn{
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(243, 61, 61);
+}
+.manualBtn::after{
+    font-size: 10px;
+    display: inline;
+    content: "reset button";
+    position: relative;
+    top: -12px;
+    left: 10px;
+}
+.manualTextBox{
+    display: none;
+    position: relative;
+    top: 16px;
+    left: 10px;
+    border: 1px solid black;
+    width: 948px;
+    height: 350px;
+    padding: 10px;
+}
+.lineText1{
+    position: relative;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 10%;
+}
+.lineText2{
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+}
+.textImg1{
+    background-image: url(/img/manualImg1s.png);
+    background-size: cover;
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+}
+.textImg2{
+    background-image: url(/img/manualImg2s.png);
+    background-size: cover;
+    position: absolute;
+    top: 150px;
+    left: 333px;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+}
+.textImg3{
+    background-image: url(/img/manualImg3s.png);
+    background-size: cover;
+    position: absolute;
+    top: 150px;
+    left: 655px;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+}
+@keyframes moving {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -2000px 0;
+    }
+}
+@keyframes switchOn {
+    0%{
+        width: 0%;
+        height: 0%;
+        opacity: 0;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+}
+@keyframes manualAni{
+    0%{
+        width: 110px;
+        height: 90px;
+    }
+    100%{
+        width: 1000px;
+        height: 440px;
+    }
+}
+@keyframes manualAniBack{
+    0%{
+        width: 1000px;
+        height: 440px;
+    }
+    100%{
+        width: 110px;
+        height: 90px;
+    }
+}
+@keyframes manualTextBoxAni{
+    0%{
+        width: 0%;
+        height: 0%;
+    }
+    100%{
+        width: 948px;
+        height: 350px;
+    }
+}
+@keyframes lineTextAni{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes manualImgAni{
+    0%{
+        opacity: 0;
+        top: 180px;
+    }
+    100%{
+        opacity: 1;
+        top: 150px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .console{
+        width: 500px;
+        height: 250px;
+    }
+    .screen{
+        width: 80%;
+        height: 80%;
+    }
+    .controllerLeft, .controllerRight {
+        width: 100px;
+        height: 250px;
+    }
+    .leftSideBar, .rightSideBar{
+        width: 80px;
+        height: 40px;
+    }
+    .minus{
+        width: 15px;
+        height: 5px;
+        left: 70px;
+    }
+    .leftJoystick{
+        width: 40px;
+        height: 40px;
+    }
+    .leftBtn1{
+        left: 49px;
+        width: 20px;
+        height: 20px;
+    } 
+    .leftBtn2{
+        width: 20px;
+        height: 20px;
+        left: 49px;
+    }
+    .leftBtn3{
+        left: 25px;
+        top: 45px;
+        width: 20px;
+        height: 20px;
+    } 
+    .leftBtn4{
+        left: 73px;
+        top: 23px;
+        width: 20px;
+        height: 20px;
+    }
+    .idn1{
+        width: 15px;
+        height: 15px;
+    }
+    .plus, .plus1{
+        width: 15px;
+        height: 5px;
+    }
+    .plus2{
+        width: 4px;
+        height: 4px;
+        left: 19px;
+    }
+    .rightJoystick{
+        width: 40px;
+        height: 40px;
+    }
+    .rightBtn1{
+        font-size: 12px;
+        top: 20px;
+        left: 38px;
+        width: 20px;
+        height: 20px;
+    } 
+    .rightBtn2{
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        top: 35px;
+        left: 38px;
+    }
+    .rightBtn3{
+        font-size: 12px;
+        left: 18px;
+        top: -5px;
+        width: 20px;
+        height: 20px;
+    } 
+    .rightBtn4{
+        font-size: 12px;
+        left: 60px;
+        top: -26px;
+        width: 20px;
+        height: 20px;
+    }
+    .idn2{
+        top: 40px;
+        width: 15px;
+        height: 15px;
+    }
+    .screenSystem{
+        top: 100px;
+        left: 200px;
+    }
+}
